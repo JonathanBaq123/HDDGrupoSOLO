@@ -31,3 +31,14 @@ jobs:
          echo "Nombre del repositorio: ${{ github.repository }}"
          echo "Dueno del repositorio: ${{ github.repository_owner }}"
          echo "Rama principal: ${{ github.ref_name }}"
+
+
+      - name: Con Despedida
+        if: env.MOSTRAR_DESPEDIDA == 'true'
+        run: |
+          echo "Hasta pronto equipo de $GRUPO!"
+
+      - name: Sin despedida
+        if: env.MOSTRAR_DESPEDIDA == 'false'
+        run: |
+          echo "Esto no deberia imprimirse"
