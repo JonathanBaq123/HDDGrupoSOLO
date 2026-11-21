@@ -43,7 +43,7 @@ jobs:
         run: |
           echo "Esto no deberia imprimirse"
 
-
       - name: Generar y mostrar resultado en JSON
         run: |
-          cat <
+          printf '{\n  "grupo": "%s",\n  "curso": "%s",\n  "mostrar_despedida": "%s",\n  "repositorio": "%s",\n  "dueno": "%s",\n  "rama": "%s"\n}\n' "$GRUPO" "$CURSO" "$MOSTRAR_DESPEDIDA" "${{ github.repository }}" "${{ github.repository_owner }}" "${{ github.ref_name }}" > resultado.json
+          cat resultado.json
