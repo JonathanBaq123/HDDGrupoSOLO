@@ -1,1 +1,19 @@
 name: HDDGrupoSOLO
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  GRUPO: "HDDGrupoSOLO"
+  CURSO: "Herramientas de Desarrollo"
+  MOSTRAR_DESPEDIDA: "true"
+
+jobs:
+  ejecucion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prueba de mensajes
+        run: |
+          echo "Hola equipo de $GRUPO, saludo desde GitHub Actions"
