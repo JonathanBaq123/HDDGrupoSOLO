@@ -17,3 +17,10 @@ jobs:
       - name: Prueba de mensajes
         run: |
           echo "Hola equipo de $GRUPO, saludo desde GitHub Actions"
+
+
+          - name: Variables creada en el workflow
+        run: |
+          echo "Variable 1 (GRUPO): $GRUPO"
+          echo "Variable 2 (CURSO): $CURSO"
+          echo "Variable 3 (MOSTRAR_DESPEDIDA): $MOSTRAR_DESPEDIDA"
