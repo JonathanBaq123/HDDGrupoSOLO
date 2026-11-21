@@ -42,3 +42,8 @@ jobs:
         if: env.MOSTRAR_DESPEDIDA == 'false'
         run: |
           echo "Esto no deberia imprimirse"
+
+
+      - name: Generar y mostrar resultado en JSON
+        run: |
+          cat <
